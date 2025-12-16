@@ -47,6 +47,9 @@ const HeroSection = () => {
       mixBlendMode: 'multiply',
       opacity: 0.7
     }} />
+      
+      {/* Bottom Fade Effect */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 z-[4] bg-gradient-to-t from-background to-transparent pointer-events-none" />
       <div className="w-full max-w-[1280px] flex flex-col items-center gap-20 relative z-[3]">
         <div className="w-full max-w-3xl flex flex-col items-center gap-8">
           {/* Feature badges */}
