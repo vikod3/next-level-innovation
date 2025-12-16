@@ -5,6 +5,7 @@ import Hls from "hls.js";
 import dashboardImage from "@/assets/dashboard.png";
 import BlurText from "@/components/animations/BlurText";
 import { motion } from "motion/react";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -51,10 +52,15 @@ const HeroSection = () => {
       mixBlendMode: 'multiply',
       opacity: 0.7
     }} />
+
+      {/* Floating Particles */}
+      <div className="absolute inset-x-0 top-0 z-[3] pointer-events-none" style={{ height: '110vh' }}>
+        <ParticlesBackground />
+      </div>
       
       {/* Bottom Fade Effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-48 z-[4] bg-gradient-to-t from-background to-transparent pointer-events-none" />
-      <div className="w-full max-w-[1280px] flex flex-col items-center gap-20 relative z-[3]">
+      <div className="absolute bottom-0 left-0 right-0 h-48 z-[5] bg-gradient-to-t from-background to-transparent pointer-events-none" />
+      <div className="w-full max-w-[1280px] flex flex-col items-center gap-20 relative z-[4]">
         <div className="w-full max-w-3xl flex flex-col items-center gap-8">
           {/* Feature badges */}
           <div className="flex flex-wrap items-center justify-center gap-3">
