@@ -36,6 +36,8 @@ const Navbar = () => {
 
         {/* Desktop Navigation - Glassmorphism Center */}
         <div className="hidden md:flex items-center justify-center relative">
+          {/* Glassmorphism background */}
+          <div className="absolute inset-0 rounded-full bg-white/10 backdrop-blur-md" />
           {/* Border layer with mask effect */}
           <div 
             className="absolute inset-0 rounded-full border border-white/30"
@@ -44,7 +46,7 @@ const Navbar = () => {
             }}
           />
           {/* Content layer */}
-          <nav className="flex items-center gap-7 px-6 py-3">
+          <nav className="relative flex items-center gap-7 px-6 py-3">
             {navLinks.map((link) => (
               link.href.startsWith('/') ? (
                 <Link
