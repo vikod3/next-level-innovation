@@ -87,7 +87,7 @@ const HeroSection = () => {
               className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[92px] text-hero-foreground font-normal leading-tight tracking-tight"
             />
             <motion.p 
-              className="text-lg md:text-xl text-hero-muted font-normal leading-relaxed max-w-4xl drop-shadow-lg"
+              className="text-lg md:text-xl text-white/90 font-normal leading-relaxed max-w-4xl drop-shadow-lg"
               style={{ textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}
               initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
               animate={{ filter: 'blur(0px)', opacity: 1, y: 0 }}
