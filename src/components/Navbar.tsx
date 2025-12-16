@@ -71,7 +71,7 @@ const Navbar = () => {
 
         {/* Desktop CTA Button */}
         <div className="hidden md:flex items-center">
-          <Button variant="hero" size="sm" className="rounded-2xl px-6">
+          <Button variant="hero" size="sm" className="rounded-[10px] px-6">
             Get Started
           </Button>
         </div>
