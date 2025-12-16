@@ -35,7 +35,12 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation - Glassmorphism Center */}
-        <div className="hidden md:flex items-center justify-center backdrop-blur-md bg-white/10 border border-white/10 rounded-full px-6 py-3">
+        <div 
+          className="hidden md:flex items-center justify-center backdrop-blur-md bg-white/10 border border-white/10 rounded-full px-6 py-3 overflow-hidden"
+          style={{
+            maskImage: "linear-gradient(160deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 39%, rgba(0, 0, 0, 0) 69%, rgb(0, 0, 0) 100%)",
+          }}
+        >
           <nav className="flex items-center gap-7">
             {navLinks.map((link) => (
               link.href.startsWith('/') ? (
