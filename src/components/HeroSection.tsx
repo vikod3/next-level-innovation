@@ -10,7 +10,7 @@ const HeroSection = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    const videoSrc = "https://customer-cbeadsgr09pnsezs.cloudflarestream.com/74cb72d57c6a6d6d7807693d02e6707b/manifest/video.m3u8";
+    const videoSrc = "https://customer-cbeadsgr09pnsezs.cloudflarestream.com/e923e67d71fed3e0853ec57f0348451e/manifest/video.m3u8";
 
     // Check if browser natively supports HLS (Safari)
     if (video.canPlayType('application/vnd.apple.mpegurl')) {
