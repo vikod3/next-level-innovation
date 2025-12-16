@@ -24,11 +24,11 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center">
           <div className="backdrop-blur-[10px] rounded-full p-2">
-            <Link to="/" className="block h-8">
+            <Link to="/" className="block h-6">
               <img 
                 src="/lovable-uploads/25b3039d-5f98-460a-9606-1510946f155d.png" 
                 alt="Logo" 
-                className="h-8 w-auto brightness-0 invert"
+                className="h-6 w-auto brightness-0 invert"
               />
             </Link>
           </div>
