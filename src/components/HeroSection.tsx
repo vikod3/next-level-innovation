@@ -58,20 +58,20 @@ const HeroSection = () => {
         <div className="w-full max-w-3xl flex flex-col items-center gap-8">
           {/* Feature badges */}
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <div className="flex items-center gap-3 px-6 py-3 bg-white/10 rounded-full backdrop-blur-md">
-              <Lightbulb className="w-5 h-5 text-hero-foreground" />
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full backdrop-blur-md">
+              <Lightbulb className="w-4 h-4 text-hero-foreground" />
               <span className="text-white/80 text-sm font-medium">
                 Smarter Business
               </span>
             </div>
-            <div className="flex items-center gap-3 px-6 py-3 bg-white/10 rounded-full backdrop-blur-md">
-              <Zap className="w-5 h-5 text-hero-foreground" />
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full backdrop-blur-md">
+              <Zap className="w-4 h-4 text-hero-foreground" />
               <span className="text-white/80 text-sm font-medium">
                 AI-powered
               </span>
             </div>
-            <div className="flex items-center gap-3 px-6 py-3 bg-white/10 rounded-full backdrop-blur-md">
-              <Sparkles className="w-5 h-5 text-hero-foreground" />
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full backdrop-blur-md">
+              <Sparkles className="w-4 h-4 text-hero-foreground" />
               <span className="text-white/80 text-sm font-medium">
                 Instantly
               </span>
