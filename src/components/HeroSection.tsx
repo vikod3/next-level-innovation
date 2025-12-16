@@ -107,9 +107,11 @@ const HeroSection = () => {
             <Button variant="hero" className="w-full sm:w-auto">
               Get Started for Free
             </Button>
-            <Button variant="hero-secondary" className="w-full sm:w-auto">
-              Let's Get Connected
-            </Button>
+            <div className="p-[1px] rounded-[10px] bg-gradient-to-r from-orange-500 to-blue-500 w-full sm:w-auto">
+              <Button variant="hero-secondary" className="w-full">
+                Let's Get Connected
+              </Button>
+            </div>
           </motion.div>
         </div>
 
