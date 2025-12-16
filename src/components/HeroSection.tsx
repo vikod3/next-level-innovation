@@ -46,7 +46,7 @@ const HeroSection = () => {
       mixBlendMode: 'multiply',
       opacity: 0.7
     }} />
-      <div className="w-full max-w-[1280px] flex flex-col items-center gap-20 relative z-[3] pt-[120px]">
+      <div className="w-full max-w-[1280px] flex flex-col items-center gap-20 relative z-[3] pt-[60px]">
         <div className="w-full max-w-3xl flex flex-col items-center gap-8">
           {/* Feature badges */}
           <div className="flex flex-wrap items-center justify-center gap-3">
