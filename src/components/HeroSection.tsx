@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Lightbulb, Zap, Sparkles } from "lucide-react";
 import { useEffect, useRef } from "react";
 import Hls from "hls.js";
+import dashboardImage from "@/assets/dashboard.png";
 
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -87,6 +88,15 @@ const HeroSection = () => {
               Let's Get Connected
             </Button>
           </div>
+        </div>
+
+        {/* Dashboard Image */}
+        <div className="w-full max-w-5xl mt-8">
+          <img 
+            src={dashboardImage} 
+            alt="Dashboard preview" 
+            className="w-full h-auto rounded-2xl shadow-2xl"
+          />
         </div>
       </div>
     </section>;
