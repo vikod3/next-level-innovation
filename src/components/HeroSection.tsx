@@ -3,6 +3,8 @@ import { Lightbulb, Zap, Sparkles } from "lucide-react";
 import { useEffect, useRef } from "react";
 import Hls from "hls.js";
 import dashboardImage from "@/assets/dashboard.png";
+import BlurText from "@/components/animations/BlurText";
+import { motion } from "motion/react";
 
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -78,31 +80,51 @@ const HeroSection = () => {
 
           {/* Main content */}
           <div className="flex flex-col items-center gap-6 text-center">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[92px] text-hero-foreground font-normal leading-tight tracking-tight">Platform For Next Level Innovation</h1>
-            <p className="text-lg md:text-xl text-hero-muted font-normal leading-relaxed opacity-70 max-w-4xl">
+            <BlurText
+              text="Platform For Next Level Innovation"
+              delay={100}
+              direction="bottom"
+              className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[92px] text-hero-foreground font-normal leading-tight tracking-tight"
+            />
+            <motion.p 
+              className="text-lg md:text-xl text-hero-muted font-normal leading-relaxed opacity-70 max-w-4xl"
+              initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
+              animate={{ filter: 'blur(0px)', opacity: 0.7, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-            </p>
+            </motion.p>
           </div>
 
           {/* Call to action buttons */}
-          <div className="flex flex-col sm:flex-row items-center gap-4">
+          <motion.div 
+            className="flex flex-col sm:flex-row items-center gap-4"
+            initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
+            animate={{ filter: 'blur(0px)', opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1 }}
+          >
             <Button variant="hero" className="w-full sm:w-auto">
               Get Started for Free
             </Button>
             <Button variant="hero-secondary" className="w-full sm:w-auto">
               Let's Get Connected
             </Button>
-          </div>
+          </motion.div>
         </div>
 
         {/* Dashboard Image */}
-        <div className="w-full max-w-5xl mt-8">
+        <motion.div 
+          className="w-full max-w-5xl mt-8"
+          initial={{ filter: 'blur(10px)', opacity: 0, y: 30 }}
+          animate={{ filter: 'blur(0px)', opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+        >
           <img 
             src={dashboardImage} 
             alt="Dashboard preview" 
             className="w-full h-auto rounded-2xl shadow-2xl"
           />
-        </div>
+        </motion.div>
       </div>
     </section>;
 };
