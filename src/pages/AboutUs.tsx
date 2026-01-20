@@ -2,33 +2,8 @@ import Navbar from "@/components/Navbar";
 import { Footer } from "@/components/ui/footer-section";
 import { Button } from "@/components/ui/button";
 import { Users, Target, Heart, Award, ArrowRight } from "lucide-react";
-import { useEffect, useRef } from "react";
-import Hls from "hls.js";
 
 const AboutUs = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const videoSrc = "https://customer-cbeadsgr09pnsezs.cloudflarestream.com/74cb72d57c6a6d6d7807693d02e6707b/manifest/video.m3u8";
-
-    // Check if browser natively supports HLS (Safari)
-    if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = videoSrc;
-    } else if (Hls.isSupported()) {
-      // Use hls.js for other browsers
-      const hls = new Hls();
-      hls.loadSource(videoSrc);
-      hls.attachMedia(video);
-      
-      return () => {
-        hls.destroy();
-      };
-    }
-  }, []);
-
   return (
     <>
       <Navbar />
@@ -38,7 +13,6 @@ const AboutUs = () => {
         {/* Background Video Layer */}
         <div className="absolute inset-0 z-[1]" style={{ top: '-50%' }}>
           <video 
-            ref={videoRef}
             className="w-full h-full object-cover" 
             style={{
               filter: 'saturate(0)',
@@ -48,6 +22,7 @@ const AboutUs = () => {
             muted 
             loop 
             playsInline
+            src="/videos/hero-bg.mp4"
           />
         </div>
         
