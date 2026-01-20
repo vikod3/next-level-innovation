@@ -1,46 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { Lightbulb, Zap, Sparkles } from "lucide-react";
-import { useEffect, useRef } from "react";
-import Hls from "hls.js";
 import dashboardImage from "@/assets/dashboard.png";
 import BlurText from "@/components/animations/BlurText";
 import { motion } from "motion/react";
 import ParticlesBackground from "@/components/ParticlesBackground";
 
 const HeroSection = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const videoSrc = "https://customer-cbeadsgr09pnsezs.cloudflarestream.com/e923e67d71fed3e0853ec57f0348451e/manifest/video.m3u8";
-
-    // Check if browser natively supports HLS (Safari)
-    if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = videoSrc;
-    } else if (Hls.isSupported()) {
-      // Use hls.js for other browsers
-      const hls = new Hls();
-      hls.loadSource(videoSrc);
-      hls.attachMedia(video);
-      
-      return () => {
-        hls.destroy();
-      };
-    }
-  }, []);
-
   return <section className="w-full min-h-screen px-8 md:px-16 pt-32 flex items-start justify-center overflow-hidden relative">
       {/* Background Video Layer */}
       <div className="absolute inset-x-0 top-0 z-[1]" style={{ height: '110vh' }}>
         <video 
-          ref={videoRef}
           className="w-full h-full object-cover" 
           autoPlay 
           muted 
           loop 
           playsInline
+          src="/videos/hero-bg.mp4"
         />
         {/* Video bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent" />
